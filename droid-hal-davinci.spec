@@ -10,6 +10,7 @@
 %define enable_kernel_update 1
 
 %define straggler_files \
+    /bt_firmware \
     /bugreports \
     /d \
     /cache \
@@ -19,18 +20,8 @@
     /persist \
     /product \
     /odm \
-    /plat_file_contexts \
-    /plat_hwservice_contexts \
-    /plat_property_contexts \
-    /plat_seapp_contexts \
-    /plat_service_contexts \
-    /vendor_file_contexts \
-    /vendor_hwservice_contexts \
-    /vendor_property_contexts \
-    /vendor_seapp_contexts \
-    /vendor_service_contexts \
-    /vndservice_contexts \
-    /sepolicy \
+    /oem \
+    /sdcard \
 %{nil}
 
 %define additional_post_scripts \
@@ -42,6 +33,6 @@
 %{nil}
 
 # On Android 8 the system partition is (intended to be) mounted on /.
-%define makefstab_skip_entries /dev/stune /dev/cpuset /sys/fs/pstore /dev/cpuctl
+%define makefstab_skip_entries / /vendor /dev/stune /dev/cpuset /sys/fs/pstore /dev/cpuctl
 
 %include rpm/dhd/droid-hal-device.inc
