@@ -3,6 +3,7 @@
 %define vendor xiaomi
 %define vendor_pretty Xiaomi
 %define device_pretty Redmi K20
+%define rpm_device davinci
 %define installable_zip 1
 %define droid_target_aarch64 1
 
