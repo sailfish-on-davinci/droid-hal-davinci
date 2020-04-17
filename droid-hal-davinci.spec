@@ -11,6 +11,8 @@
 %define enable_kernel_update 1
 
 %define straggler_files \
+    /acct \
+    /charger \
     /bt_firmware \
     /bugreports \
     /d \
