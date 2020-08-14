@@ -26,6 +26,7 @@
     /system \
     /vendor \
     /oem \
+    /verity_key \
 %{nil}
 
 %define additional_post_scripts \
@@ -37,6 +38,7 @@
 %{nil}
 
 # On Android 8 the system partition is (intended to be) mounted on /.
-%define makefstab_skip_entries /vendor /dev/stune /dev/cpuset /sys/fs/pstore /dev/cpuctl
+%define makefstab_skip_entries /vendor /dev/stune /dev/cpuset /sys/fs/pstore /dev/cpuctl \
+	/dev/sdf7 /dev/sdf8
 
 %include rpm/dhd/droid-hal-device.inc
