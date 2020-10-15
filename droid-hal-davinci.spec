@@ -24,7 +24,6 @@
     /product \
     /odm \
     /system \
-    /vendor \
     /oem \
     /verity_key \
 %{nil}
